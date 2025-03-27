@@ -45,7 +45,7 @@ public class AdventureDetailsPage {
       person_count.sendKeys(count);
       Thread.sleep(5000);
       reserve_button.click();
-      Thread.sleep(3000);
+      
     }
 
     public boolean verifyAdventureBooking(){
