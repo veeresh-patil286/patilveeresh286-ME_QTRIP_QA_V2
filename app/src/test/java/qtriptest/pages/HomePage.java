@@ -6,64 +6,67 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
+
 public class HomePage {
+
     RemoteWebDriver driver;
-    RegisterPage registerPage;
-    public HomePage(RemoteWebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
-    }
-    public static String InvalidMsg = "No City found";
+String url="https://qtripdynamic-qa-frontend.vercel.app";
 
-    @FindBy(xpath = "//a[text()='Register']")
-    private WebElement RegisterHomeButton;
+@FindBy(id="autocomplete")
+WebElement search_valid_cityName;
 
-    @FindBy(xpath = "//div[text()='Logout']")
-    private WebElement logoutHomeButton;
+@FindBy(xpath="//h5[text()='No City found']")
+WebElement no_city_found;
 
-    @FindBy(className = "hero-input")
-    private WebElement searchBox;
+@FindBy(id="results")
+WebElement city_result;
 
-    @FindBy(id = "results")
-    private WebElement NoCityFoundMsg;
+public HomePage(RemoteWebDriver driver){
+    this.driver=driver;
+    AjaxElementLocatorFactory ajax= new AjaxElementLocatorFactory(driver,  10);
+    PageFactory.initElements(ajax, this);
+}
 
-    @FindBy(xpath = "//li[text()=' Goa ']")
-    private WebElement CityFoundMsg;
+public void navigateToHomePage() throws InterruptedException{
 
-    public boolean isRegisterButtonVisible() throws InterruptedException{
-        Thread.sleep(5000);
-        return RegisterHomeButton.isDisplayed() && RegisterHomeButton.isEnabled();
+    if(!driver.getCurrentUrl().equals(url)){
+        driver.get(url);
     }
+}
 
-    public void navigateToRegister() throws InterruptedException{
-        RegisterHomeButton.click();
-        Thread.sleep(3000);
+
+public void searchCity(String CityName) throws InterruptedException{
+
+    search_valid_cityName.clear();
+    Thread.sleep(2000);
+    search_valid_cityName.sendKeys(CityName);
+
+}
+public boolean isCityNotFound(){
+    boolean status= false;
+    try{
+        status=no_city_found.isDisplayed();
+        return status;
+    }catch(Exception e){
+        return status;
     }
-    public boolean isLogoutButtonVisible() throws InterruptedException{
-        Thread.sleep(2000);
-        //waitForElementVisibility(driver, logoutHomeButton);
-        return logoutHomeButton.isDisplayed();
+}
+public boolean isCityFound(){
+    boolean status= false;
+    try{
+        status=city_result.isDisplayed();
+        return status;
+    }catch(Exception e){
+        return status;
     }
-    public void logoutUser() throws InterruptedException{
-        logoutHomeButton.click();
-        Thread.sleep(1000);
-    }
-    public void searchInvalidData() throws InterruptedException{
-        searchBox.sendKeys("invalid");
-        Thread.sleep(1000);
-    }
-    public boolean validateInvalidMsg() throws InterruptedException{
-        return NoCityFoundMsg.getText().equals(InvalidMsg);
-    }
-    public void searchValidData(String cityName) throws InterruptedException{
-        Thread.sleep(3000);
-        searchBox.clear();
-        Thread.sleep(2000);
-        searchBox.sendKeys(cityName);
-        Thread.sleep(2000);
-    }
-    public boolean validateValidMsg(String CityName) throws InterruptedException{
-        return CityFoundMsg.getText().equals(CityName);
-    }
+}
+
+
+public void selectCity() throws InterruptedException{
+    Thread.sleep(2000);
+    city_result.click();
+//    WebDriverWait wait= new WebDriverWait(driver, 5);
+//    wait.until(ExpectedConditions.urlToBe("https://qtripdynamic-qa-frontend.vercel.app"));
+  }   
 
 }

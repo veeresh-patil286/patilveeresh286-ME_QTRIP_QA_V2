@@ -8,17 +8,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
 public class DP {
     // TODO: use correct annotation to connect the Data Provider with your Test Cases
-   
-    @DataProvider(name = "Data-Provider")
+    @DataProvider (name="DatasetsforQTrip")
     public Object[][] dpMethod(Method m) throws IOException {
         int rowIndex = 0;
         int cellIndex = 0;
@@ -27,7 +26,7 @@ public class DP {
         FileInputStream excelFile = new FileInputStream(new File(
                 "/home/crio-user/workspace/patilveeresh286-ME_QTRIP_QA_V2/app/src/test/resources/DatasetsforQTrip.xlsx"));
         Workbook workbook = new XSSFWorkbook(excelFile);
-        Sheet selectedSheet = workbook.getSheet(m.getName());
+        Sheet selectedSheet =  workbook.getSheet(m.getName());
         Iterator<Row> iterator = selectedSheet.iterator();
         while (iterator.hasNext()) {
             Row nextRow = iterator.next();

@@ -1,56 +1,65 @@
 package qtriptest.pages;
 
-// import java.rmi.Remote;
 import java.util.UUID;
-// import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
-public class RegisterPage {
+public class RegisterPage { 
     RemoteWebDriver driver;
-    public String DynamicUser;
+    String url="https://qtripdynamic-qa-frontend.vercel.app";
+    public String lastGeneratedUsername = "";
 
-    public RegisterPage(RemoteWebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
-    }
-    public String email = null;
-    private static String registerEndPoint  = "/pages/register/";
 
-    @FindBy(xpath = "//h2[@class='formtitle']")
-    WebElement registerHead;
+    @FindBy(xpath="//a[text()='Register']")
+    WebElement register;
 
-    @FindBy(name = "email")
-    private WebElement emailTextBox;
+   @FindBy(name="email")
+   WebElement username_txt_box;
 
-    @FindBy(name = "password")
-    private WebElement passwordTextBox;
+   @FindBy(name="password")
+   WebElement password_txt_box;
 
-    @FindBy(name = "confirmpassword")
-    private WebElement confirmPasswordTextBox;
+   @FindBy(name="confirmpassword")
+   WebElement confirm_password_txt_box;
 
-    @FindBy(xpath = "//button[text()='Register Now']")
-    private WebElement registerButton;
+   @FindBy(xpath="//button[text()='Register Now']")
+   WebElement register_now_button;
 
-    public boolean isRegisterNavigationSucceded(){
-        return driver.getCurrentUrl().contains(registerEndPoint) && 
-        registerHead.getText().equals("Register");
-
+    public RegisterPage(RemoteWebDriver driver) {
+        this.driver=driver;
+        AjaxElementLocatorFactory ajax=new AjaxElementLocatorFactory(driver, 10);
+        PageFactory.initElements(ajax, this);
     }
 
-    public void onBoardNewUser(String email,String password,String confirmPassword, boolean isDynamicUser) throws InterruptedException{
-        if(isDynamicUser){
-            email = String.format("testuser_%s@email.com", UUID.randomUUID().toString());
-            this.email = email;
+    public void navigateToRegisterPage() throws InterruptedException{
+
+       
+        if(!driver.getCurrentUrl().equals(this.url)){
+            driver.get(this.url);
         }
-        emailTextBox.sendKeys(email);
-        passwordTextBox.sendKeys(password);
-        confirmPasswordTextBox.sendKeys(confirmPassword);
+    }
+
+    public boolean registerNewUser(String username, String password, boolean generateRandomUsername) throws InterruptedException{
+
+        if (generateRandomUsername) {
+            // Concatenate the timestamp to string to form unique timestamp
+            username = UUID.randomUUID().toString()+username;
+        }
+
+       //Thread.sleep(3000);
+        register.click();
         
-        registerButton.click();
-        Thread.sleep(1000);
+        username_txt_box.sendKeys(username);
+        password_txt_box.sendKeys(password);
+        confirm_password_txt_box.sendKeys(password);
+        lastGeneratedUsername = username;
+
+               register_now_button.click();
+               Thread.sleep(3000);
+
+        return this.driver.getCurrentUrl().endsWith("/login");
     }
 }

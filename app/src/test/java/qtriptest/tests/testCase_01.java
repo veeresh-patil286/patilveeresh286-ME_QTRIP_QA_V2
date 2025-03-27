@@ -1,75 +1,50 @@
 package qtriptest.tests;
 
 import qtriptest.DP;
-// import qtriptest.ExternalDataProvider;
+import qtriptest.DriverSingleton;
 import qtriptest.pages.HomePage;
 import qtriptest.pages.LoginPage;
 import qtriptest.pages.RegisterPage;
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.charset.MalformedInputException;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.BeforeClass;
-import org.testng.asserts.SoftAssert;
-import org.testng.annotations.DataProvider;
+import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class testCase_01 {
-    RemoteWebDriver driver;
-    HomePage homePage;
-    LoginPage loginPage;
-    RegisterPage registerPage;
-    SoftAssert softAssert;
+    static RemoteWebDriver driver;
+    public String lastUsername;
 
-    @BeforeClass
-    public void config() throws MalformedURLException{
-        ChromeOptions chromeOptions = new ChromeOptions();
-        driver = new RemoteWebDriver(new URL("http://localhost:8082/wd/hub"), chromeOptions);
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
-        driver.get("https://qtripdynamic-qa-frontend.vercel.app");
-
-        homePage = new HomePage(driver);
-        registerPage = new RegisterPage(driver);
-        loginPage = new LoginPage(driver,registerPage);
-        
+    // Method to help us log our Unit Tests
+    public static void logStatus(String type, String message, String status) {
+        System.out.println(String.format("%s |  %s  |  %s | %s", String.valueOf(java.time.LocalDateTime.now()), type, message, status));
     }
 
-    @Test(dataProvider = "Data-Provider", dataProviderClass = DP.class)
-    public void TestCase01(String UserName, String Password) throws InterruptedException{
-        softAssert = new SoftAssert();
-        System.out.println("Data from DP");
-        // String userName = "test256@gmail.com";
-        // String password = "test@123";
-        String confirmPassword = Password;
+    // Initialize webdriver for our Unit Tests
+    @BeforeSuite(alwaysRun = true, enabled = true)
+    public void createDriver() throws MalformedURLException {
+        logStatus("driver", "Initializing driver", "Started");
+        driver = DriverSingleton.getDriverInstance("chrome");
+        logStatus("driver", "Initializing driver", "Success");
+    }
 
+    @Test(dataProvider = "DatasetsforQTrip", dataProviderClass = DP.class,
+    enabled = true, description = "verify Login flow", priority = 1, groups = {"Login Flow"})
+    public void TestCase01(String username, String password) throws InterruptedException {
+        HomePage home = new HomePage(driver);
+        home.navigateToHomePage();
 
-        softAssert.assertTrue(homePage.isRegisterButtonVisible(),"RegisterPage navigation is failed");
+        RegisterPage register = new RegisterPage(driver);
+        register.navigateToRegisterPage();
 
-        System.out.println("Navigate to Register page");
-        homePage.navigateToRegister();
+        Assert.assertTrue(register.registerNewUser(username, password, true));
+        lastUsername = register.lastGeneratedUsername;
+        System.out.println("Registration complete: " + username);
 
-        softAssert.assertTrue(registerPage.isRegisterNavigationSucceded(), 
-        "RegisterPage navigation from home is failed");
-        Thread.sleep(3000);
-
-        System.out.println("OnBoard new user");
-        registerPage.onBoardNewUser(UserName, Password, confirmPassword, true);
-
-        softAssert.assertTrue(loginPage.isLoginNavigationSucceded(), 
-        "Login navigation is failed");
-        Thread.sleep(2000);
-        
-        System.out.println("Login new user");
-        loginPage.loginUser(UserName, Password, true);
-        Thread.sleep(3000);
-        homePage.isLogoutButtonVisible();
-
-        Thread.sleep(3000);
-        homePage.logoutUser();
-
-        softAssert.assertAll();
-
+        LoginPage login = new LoginPage(driver);
+        login.performLogin(lastUsername, password);
+        Assert.assertTrue(login.verifyLogin());
+        login.logout();
+        Assert.assertTrue(login.verifyLogout());
     }
 }
