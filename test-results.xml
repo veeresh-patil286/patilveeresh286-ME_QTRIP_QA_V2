@@ -1,29 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="8" total="20" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-28T00:07:02 IST" name="Testing for QTrip" finished-at="2025-03-28T00:17:22 IST" duration-ms="619748">
+  <suite started-at="2025-03-30T15:08:40 IST" name="Gradle suite" finished-at="2025-03-30T15:18:18 IST" duration-ms="577559">
     <groups>
       <group name="Booking and Cancellation Flow">
-        <method signature="testCase_03.TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@8458f04]" name="TestCase03" class="qtriptest.tests.testCase_03"/>
+        <method signature="testCase_03.TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@6253c26]" name="TestCase03" class="qtriptest.tests.testCase_03"/>
       </group> <!-- Booking and Cancellation Flow -->
       <group name="Reliability Flow">
-        <method signature="testCase_04.TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@48075da3]" name="TestCase04" class="qtriptest.tests.testCase_04"/>
+        <method signature="testCase_04.TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@49049a04]" name="TestCase04" class="qtriptest.tests.testCase_04"/>
       </group> <!-- Reliability Flow -->
       <group name="Search and Filter flow">
-        <method signature="testCase_02.TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@606e4010]" name="TestCase02" class="qtriptest.tests.testCase_02"/>
+        <method signature="testCase_02.TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@67f639d3]" name="TestCase02" class="qtriptest.tests.testCase_02"/>
       </group> <!-- Search and Filter flow -->
       <group name="Login Flow">
-        <method signature="testCase_01.TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@2d901eb0]" name="TestCase01" class="qtriptest.tests.testCase_01"/>
+        <method signature="testCase_01.TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@290222c1]" name="TestCase01" class="qtriptest.tests.testCase_01"/>
       </group> <!-- Login Flow -->
     </groups>
-    <test started-at="2025-03-28T00:07:02 IST" name="Test Execution using testng" finished-at="2025-03-28T00:17:22 IST" duration-ms="619748">
+    <test started-at="2025-03-30T15:08:40 IST" name="Gradle test" finished-at="2025-03-30T15:18:18 IST" duration-ms="577559">
+      <class name="qtriptest.tests.baseTest">
+        <test-method is-config="true" signature="initTestSuite()[pri:0, instance:qtriptest.tests.baseTest@2ea41516]" started-at="2025-03-30T15:08:35 IST" name="initTestSuite" finished-at="2025-03-30T15:08:40 IST" duration-ms="5265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTestSuite -->
+        <test-method is-config="true" signature="afterTestSuite()[pri:0, instance:qtriptest.tests.baseTest@2ea41516]" started-at="2025-03-30T15:18:18 IST" name="afterTestSuite" finished-at="2025-03-30T15:18:19 IST" duration-ms="866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestSuite -->
+      </class> <!-- qtriptest.tests.baseTest -->
       <class name="qtriptest.tests.testCase_01">
-        <test-method is-config="true" signature="createDriver()[pri:0, instance:qtriptest.tests.testCase_01@2d901eb0]" started-at="2025-03-28T00:06:57 IST" name="createDriver" finished-at="2025-03-28T00:07:02 IST" duration-ms="4890" status="PASS">
+        <test-method is-config="true" signature="createDriver()[pri:0, instance:qtriptest.tests.testCase_01@290222c1]" started-at="2025-03-30T15:08:40 IST" name="createDriver" finished-at="2025-03-30T15:08:40 IST" depends-on-methods="qtriptest.tests.baseTest.initTestSuite" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method signature="TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@2d901eb0]" started-at="2025-03-28T00:07:04 IST" name="TestCase01" description="verify Login flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:07:15 IST" duration-ms="11365" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_01@290222c1]" started-at="2025-03-30T15:08:44 IST" name="beforeTest" finished-at="2025-03-30T15:08:44 IST" duration-ms="234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_01.TestCase01(java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@290222c1]" started-at="2025-03-30T15:08:44 IST" name="TestCase01" description="verify Login flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:08:55 IST" duration-ms="11281" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,7 +60,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase01 -->
-        <test-method signature="TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@2d901eb0]" started-at="2025-03-28T00:07:15 IST" name="TestCase01" description="verify Login flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:07:26 IST" duration-ms="10795" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_01@290222c1]" started-at="2025-03-30T15:08:55 IST" name="afterTest" finished-at="2025-03-30T15:08:55 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase01 status=SUCCESS method=testCase_01.TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@290222c1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_01@290222c1]" started-at="2025-03-30T15:08:55 IST" name="beforeTest" finished-at="2025-03-30T15:08:55 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_01.TestCase01(java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@290222c1]" started-at="2025-03-30T15:08:55 IST" name="TestCase01" description="verify Login flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:09:06 IST" duration-ms="10397" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,7 +98,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase01 -->
-        <test-method signature="TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@2d901eb0]" started-at="2025-03-28T00:07:26 IST" name="TestCase01" description="verify Login flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:07:37 IST" duration-ms="10789" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_01@290222c1]" started-at="2025-03-30T15:09:06 IST" name="afterTest" finished-at="2025-03-30T15:09:06 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase01 status=SUCCESS method=testCase_01.TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@290222c1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_01@290222c1]" started-at="2025-03-30T15:09:06 IST" name="beforeTest" finished-at="2025-03-30T15:09:06 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_01.TestCase01(java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@290222c1]" started-at="2025-03-30T15:09:06 IST" name="TestCase01" description="verify Login flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:09:16 IST" duration-ms="10587" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,13 +136,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase01 -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_01@290222c1]" started-at="2025-03-30T15:09:16 IST" name="afterTest" finished-at="2025-03-30T15:09:16 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase01 status=SUCCESS method=testCase_01.TestCase01(java.lang.String,java.lang.String)[pri:1, instance:qtriptest.tests.testCase_01@290222c1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- qtriptest.tests.testCase_01 -->
       <class name="qtriptest.tests.testCase_04">
-        <test-method is-config="true" signature="createDriver()[pri:0, instance:qtriptest.tests.testCase_04@48075da3]" started-at="2025-03-28T00:07:02 IST" name="createDriver" finished-at="2025-03-28T00:07:02 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="createDriver()[pri:0, instance:qtriptest.tests.testCase_04@49049a04]" started-at="2025-03-30T15:08:40 IST" name="createDriver" finished-at="2025-03-30T15:08:40 IST" depends-on-methods="qtriptest.tests.baseTest.initTestSuite" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method signature="TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@48075da3]" started-at="2025-03-28T00:10:53 IST" name="TestCase04" description="verify Relaibility flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:13:01 IST" duration-ms="128213" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_04@49049a04]" started-at="2025-03-30T15:12:24 IST" name="beforeTest" finished-at="2025-03-30T15:12:24 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_04.TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@49049a04]" started-at="2025-03-30T15:12:24 IST" name="TestCase04" description="verify Relaibility flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:14:22 IST" duration-ms="117912" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -108,7 +195,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase04 -->
-        <test-method signature="TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@48075da3]" started-at="2025-03-28T00:13:01 IST" name="TestCase04" description="verify Relaibility flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:15:11 IST" duration-ms="130528" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_04@49049a04]" started-at="2025-03-30T15:14:22 IST" name="afterTest" finished-at="2025-03-30T15:14:22 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase04 status=SUCCESS method=testCase_04.TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@49049a04] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_04@49049a04]" started-at="2025-03-30T15:14:22 IST" name="beforeTest" finished-at="2025-03-30T15:14:22 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_04.TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@49049a04]" started-at="2025-03-30T15:14:22 IST" name="TestCase04" description="verify Relaibility flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:16:20 IST" duration-ms="118001" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -139,7 +248,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase04 -->
-        <test-method signature="TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@48075da3]" started-at="2025-03-28T00:15:11 IST" name="TestCase04" description="verify Relaibility flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:17:22 IST" duration-ms="130056" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_04@49049a04]" started-at="2025-03-30T15:16:20 IST" name="afterTest" finished-at="2025-03-30T15:16:20 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase04 status=SUCCESS method=testCase_04.TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@49049a04] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_04@49049a04]" started-at="2025-03-30T15:16:20 IST" name="beforeTest" finished-at="2025-03-30T15:16:20 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_04.TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@49049a04]" started-at="2025-03-30T15:16:20 IST" name="TestCase04" description="verify Relaibility flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:18:18 IST" duration-ms="117718" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -170,13 +301,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase04 -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_04@49049a04]" started-at="2025-03-30T15:18:18 IST" name="afterTest" finished-at="2025-03-30T15:18:18 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase04 status=SUCCESS method=testCase_04.TestCase04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:qtriptest.tests.testCase_04@49049a04] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- qtriptest.tests.testCase_04 -->
       <class name="qtriptest.tests.testCase_03">
-        <test-method is-config="true" signature="createDriver()[pri:0, instance:qtriptest.tests.testCase_03@8458f04]" started-at="2025-03-28T00:07:02 IST" name="createDriver" finished-at="2025-03-28T00:07:02 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="createDriver()[pri:0, instance:qtriptest.tests.testCase_03@6253c26]" started-at="2025-03-30T15:08:40 IST" name="createDriver" finished-at="2025-03-30T15:08:40 IST" depends-on-methods="qtriptest.tests.baseTest.initTestSuite" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method signature="TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@8458f04]" started-at="2025-03-28T00:08:37 IST" name="TestCase03" description="verify booking and cancellation flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:09:22 IST" duration-ms="44561" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_03@6253c26]" started-at="2025-03-30T15:10:18 IST" name="beforeTest" finished-at="2025-03-30T15:10:18 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_03.TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@6253c26]" started-at="2025-03-30T15:10:18 IST" name="TestCase03" description="verify booking and cancellation flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:11:00 IST" duration-ms="42345" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -217,7 +370,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase03 -->
-        <test-method signature="TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@8458f04]" started-at="2025-03-28T00:09:22 IST" name="TestCase03" description="verify booking and cancellation flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:10:07 IST" duration-ms="45037" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_03@6253c26]" started-at="2025-03-30T15:11:00 IST" name="afterTest" finished-at="2025-03-30T15:11:00 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase03 status=SUCCESS method=testCase_03.TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@6253c26] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_03@6253c26]" started-at="2025-03-30T15:11:00 IST" name="beforeTest" finished-at="2025-03-30T15:11:00 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_03.TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@6253c26]" started-at="2025-03-30T15:11:00 IST" name="TestCase03" description="verify booking and cancellation flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:11:42 IST" duration-ms="41823" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -258,7 +433,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase03 -->
-        <test-method signature="TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@8458f04]" started-at="2025-03-28T00:10:07 IST" name="TestCase03" description="verify booking and cancellation flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:10:52 IST" duration-ms="45746" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_03@6253c26]" started-at="2025-03-30T15:11:42 IST" name="afterTest" finished-at="2025-03-30T15:11:42 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase03 status=SUCCESS method=testCase_03.TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@6253c26] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_03@6253c26]" started-at="2025-03-30T15:11:42 IST" name="beforeTest" finished-at="2025-03-30T15:11:42 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_03.TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@6253c26]" started-at="2025-03-30T15:11:42 IST" name="TestCase03" description="verify booking and cancellation flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:12:24 IST" duration-ms="41757" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -299,13 +496,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase03 -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_03@6253c26]" started-at="2025-03-30T15:12:24 IST" name="afterTest" finished-at="2025-03-30T15:12:24 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase03 status=SUCCESS method=testCase_03.TestCase03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:qtriptest.tests.testCase_03@6253c26] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- qtriptest.tests.testCase_03 -->
       <class name="qtriptest.tests.testCase_02">
-        <test-method is-config="true" signature="createDriver()[pri:0, instance:qtriptest.tests.testCase_02@606e4010]" started-at="2025-03-28T00:07:02 IST" name="createDriver" finished-at="2025-03-28T00:07:02 IST" duration-ms="35" status="PASS">
+        <test-method is-config="true" signature="createDriver()[pri:0, instance:qtriptest.tests.testCase_02@67f639d3]" started-at="2025-03-30T15:08:40 IST" name="createDriver" finished-at="2025-03-30T15:08:40 IST" depends-on-methods="qtriptest.tests.baseTest.initTestSuite" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method signature="TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@606e4010]" started-at="2025-03-28T00:07:37 IST" name="TestCase02" description="verify Search and Filter flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:07:58 IST" duration-ms="20228" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_02@67f639d3]" started-at="2025-03-30T15:09:17 IST" name="beforeTest" finished-at="2025-03-30T15:09:17 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_02.TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@67f639d3]" started-at="2025-03-30T15:09:17 IST" name="TestCase02" description="verify Search and Filter flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:09:37 IST" duration-ms="20542" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -336,7 +555,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase02 -->
-        <test-method signature="TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@606e4010]" started-at="2025-03-28T00:07:58 IST" name="TestCase02" description="verify Search and Filter flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:08:17 IST" duration-ms="19879" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_02@67f639d3]" started-at="2025-03-30T15:09:37 IST" name="afterTest" finished-at="2025-03-30T15:09:37 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase02 status=SUCCESS method=testCase_02.TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@67f639d3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_02@67f639d3]" started-at="2025-03-30T15:09:37 IST" name="beforeTest" finished-at="2025-03-30T15:09:37 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_02.TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@67f639d3]" started-at="2025-03-30T15:09:37 IST" name="TestCase02" description="verify Search and Filter flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:09:57 IST" duration-ms="20023" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -367,7 +608,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase02 -->
-        <test-method signature="TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@606e4010]" started-at="2025-03-28T00:08:17 IST" name="TestCase02" description="verify Search and Filter flow" data-provider="DatasetsforQTrip" finished-at="2025-03-28T00:08:37 IST" duration-ms="19485" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_02@67f639d3]" started-at="2025-03-30T15:09:57 IST" name="afterTest" finished-at="2025-03-30T15:09:57 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase02 status=SUCCESS method=testCase_02.TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@67f639d3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:qtriptest.tests.testCase_02@67f639d3]" started-at="2025-03-30T15:09:57 IST" name="beforeTest" finished-at="2025-03-30T15:09:57 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void qtriptest.tests.testCase_02.TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@67f639d3]" started-at="2025-03-30T15:09:57 IST" name="TestCase02" description="verify Search and Filter flow" data-provider="DatasetsforQTrip" finished-at="2025-03-30T15:10:18 IST" duration-ms="20161" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -398,7 +661,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase02 -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:qtriptest.tests.testCase_02@67f639d3]" started-at="2025-03-30T15:10:18 IST" name="afterTest" finished-at="2025-03-30T15:10:18 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase02 status=SUCCESS method=testCase_02.TestCase02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:qtriptest.tests.testCase_02@67f639d3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- qtriptest.tests.testCase_02 -->
-    </test> <!-- Test Execution using testng -->
-  </suite> <!-- Testing for QTrip -->
+    </test> <!-- Gradle test -->
+  </suite> <!-- Gradle suite -->
 </testng-results>

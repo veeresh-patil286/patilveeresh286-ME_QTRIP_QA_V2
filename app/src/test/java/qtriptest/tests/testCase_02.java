@@ -10,7 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-public class testCase_02{
+public class testCase_02 extends baseTest {
     static RemoteWebDriver driver;
     public String lastUsername;
    // Method to help us log our Unit Tests

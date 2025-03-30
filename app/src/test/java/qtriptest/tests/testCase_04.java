@@ -14,7 +14,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-public class testCase_04 {
+public class testCase_04 extends baseTest{
     static RemoteWebDriver driver;
     public String lastUsername;
    // Method to help us log our Unit Tests

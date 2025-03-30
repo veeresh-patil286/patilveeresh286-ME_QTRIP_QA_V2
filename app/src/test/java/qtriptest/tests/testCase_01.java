@@ -11,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-public class testCase_01 {
+public class testCase_01 extends baseTest {
     static RemoteWebDriver driver;
     public String lastUsername;
 

@@ -65,8 +65,7 @@ public boolean isCityFound(){
 public void selectCity() throws InterruptedException{
     Thread.sleep(2000);
     city_result.click();
-//    WebDriverWait wait= new WebDriverWait(driver, 5);
-//    wait.until(ExpectedConditions.urlToBe("https://qtripdynamic-qa-frontend.vercel.app"));
+    
   }   
 
 }
